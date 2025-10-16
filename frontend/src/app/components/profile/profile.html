@@ -1,0 +1,28 @@
+<div class="profile-container">
+  <div class="profile-card">
+
+    <div class="profile-header">
+      <img src="https://i.pravatar.cc/150?u={{userData?._id}}" alt="Profile Picture" class="profile-pic" />
+      <h2>{{ userData?.email }}</h2>
+      <p class="role">{{ userData?.role || 'User' }}</p>
+    </div>
+
+    <div *ngIf="userData; else loadingOrError" class="profile-details">
+      <p><strong>User ID:</strong> {{ userData._id }}</p>
+      <p><strong>Email:</strong> {{ userData.email }}</p>
+      <p><strong>Created At:</strong> {{ userData.createdAt | date:'medium' }}</p>
+      <p><strong>Last Login:</strong> {{ userData.lastLogin ? (userData.lastLogin | date:'medium') : 'N/A' }}</p>
+    </div>
+
+    <div class="profile-actions">
+    
+      <button (click)="onLogout()" class="btn logout">Logout</button>
+    </div>
+
+    <ng-template #loadingOrError>
+      <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+      <p *ngIf="!errorMessage">Loading profile...</p>
+    </ng-template>
+
+  </div>
+</div>

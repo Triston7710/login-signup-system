@@ -1,0 +1,84 @@
+.signup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #6366f1, #8b5cf6, #ec4899);
+}
+
+.signup-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 380px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.signup-card h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #444;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #6366f1;
+  outline: none;
+  box-shadow: 0 0 8px #6366f1aa;
+}
+
+.btn {
+  width: 100%;
+  background: #6366f1;
+  color: #fff;
+  padding: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.btn:hover {
+  background: #4f46e5;
+  transform: scale(1.05);
+}
+
+.redirect {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.redirect a {
+  color: #6366f1;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.redirect a:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
